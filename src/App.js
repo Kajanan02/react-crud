@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ManageCategoryView from "./manage-categories /manage-category-view";
+import NavbarLayout from "./components/navbar-layout";
+import {Route, Routes} from "react-router-dom";
+import ManageProductsView from "./manage-products/manage-products-view";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={"min-vh-100 bg-light"}>
+        <NavbarLayout/>
+        <div className={"container mt-5"}>
+            <Routes>
+                <Route path="/manage-categories" element={<ManageCategoryView/>}/>
+                <Route path="/manage-products" element={<ManageProductsView/>}/>
+            </Routes>
+        </div>
     </div>
   );
 }
