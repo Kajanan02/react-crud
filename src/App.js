@@ -4,6 +4,8 @@ import ManageCategoryView from "./manage-categories /manage-category-view";
 import NavbarLayout from "./components/navbar-layout";
 import {Route, Routes} from "react-router-dom";
 import ManageProductsView from "./manage-products/manage-products-view";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -11,10 +13,11 @@ function App() {
         <NavbarLayout/>
         <div className={"container mt-5"}>
             <Routes>
-                <Route path="/manage-categories" element={<ManageCategoryView/>}/>
+                <Route path="/" element={<ManageCategoryView/>}/>
                 <Route path="/manage-products" element={<ManageProductsView/>}/>
             </Routes>
         </div>
+        <ToastContainer />
     </div>
   );
 }

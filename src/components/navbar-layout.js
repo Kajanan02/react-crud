@@ -22,7 +22,7 @@ function NavbarLayout(props) {
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
 
-                            <NavLink to="/manage-categories" className={({isActive}) => isActive ? "nav-link fw-bold" : "nav-link"} >Manage Categories</NavLink>
+                            <NavLink to="/" className={({isActive}) => isActive ? "nav-link fw-bold" : "nav-link"} >Manage Categories</NavLink>
                                 <NavLink to="manage-products" className={({isActive}) => isActive ? "nav-link fw-bold" : "nav-link"}>Manage Products</NavLink>
 
                             </Nav>
